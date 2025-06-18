@@ -5,6 +5,8 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
+      --primary-color: #7cf03d;
+
 }
 
 * {
@@ -76,6 +78,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background: url(/images/home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .home-content {
