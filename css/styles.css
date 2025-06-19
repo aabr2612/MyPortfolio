@@ -41,6 +41,10 @@ body {
     z-index: 100;
 }
 
+.header.sticky {
+    background: var(--bg-color);
+}
+
 .logo {
     font-size: 2.5rem;
     font-weight: 600;
@@ -255,8 +259,8 @@ span {
 
 .about-img {
     position: relative;
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
