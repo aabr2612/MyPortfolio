@@ -896,10 +896,6 @@ section:nth-child(odd) .animate.scroll {
         font-size: 50%;
     }
 
-    .home-content h1 {
-        margin-top: 5rem;
-    }
-
     .home-content .about-img {
         display: flex;
     }
@@ -936,10 +932,6 @@ section:nth-child(odd) .animate.scroll {
 }
 
 @media (max-width:462px) {
-    .home-content h1 {
-        margin-top: 1rem;
-    }
-
     .education {
         padding: 10rem 4% 5rem 5%;
     }
@@ -955,6 +947,15 @@ section:nth-child(odd) .animate.scroll {
     .footer p {
         margin-top: 2rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 381px) {
+    .home-content p {
+        margin-bottom: 2rem;
+    }
+    .home-sci{
+        bottom: 2rem;
     }
 }
 
