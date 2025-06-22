@@ -2,7 +2,7 @@
 
 :root {
     --bg-color: #000000;
-    --second-bg-color: #080808;
+    --second-bg-color: #181818;
     --text-color: #ededed;
     --main-color: #00abf0;
 }
@@ -97,6 +97,10 @@ section {
     z-index: 99;
 }
 
+.home-content .about-img {
+    display: none;
+}
+
 .home-content h1 {
     position: relative;
     display: inline-block;
@@ -136,6 +140,7 @@ section {
 }
 
 .btn-box .btn {
+    font-size: 1.3rem;
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -327,10 +332,6 @@ span {
 
 /* Education Section */
 .education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
 }
@@ -779,8 +780,7 @@ span {
     animation: none;
 }
 
-section:nth-child(odd) .animate.scroll,
-.footer .animate.scroll {
+section:nth-child(odd) .animate.scroll {
     background: var(--second-bg-color);
 }
 
@@ -791,8 +791,7 @@ section:nth-child(odd) .animate.scroll,
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.contact.show-animate .animate.scroll,
-.footer.show-animate .animate.scroll {
+.contact.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
@@ -897,6 +896,19 @@ section:nth-child(odd) .animate.scroll,
         font-size: 50%;
     }
 
+    .home-content h1 {
+        margin-top: 5rem;
+    }
+
+    .home-content .about-img {
+        display: flex;
+    }
+
+    .home-content .about-img .circle-spin {
+        border-top: .2rem solid var(--bg-color);
+        border-bottom: .2rem solid var(--bg-color);
+    }
+
     .home {
         justify-content: center;
         background: var(--bg-color);
@@ -924,6 +936,9 @@ section:nth-child(odd) .animate.scroll,
 }
 
 @media (max-width:462px) {
+    .home-content h1 {
+        margin-top: 1rem;
+    }
 
     .education {
         padding: 10rem 4% 5rem 5%;
