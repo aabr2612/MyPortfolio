@@ -39,3 +39,48 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 }
+
+// theme toggle
+const toggleBtn = document.getElementById('theme-toggle');
+const icon = toggleBtn.querySelector('i');
+const root = document.documentElement;
+
+const lightTheme = {
+    '--bg-color': '#ffffff',
+    '--second-bg-color': '#f5f5f5',
+    '--text-color': '#1a1a1a',
+    '--main-color': '#00abf0',
+};
+
+const darkTheme = {
+    '--bg-color': '#000000',
+    '--second-bg-color': '#181818',
+    '--text-color': '#ededed',
+    '--main-color': '#00abf0',
+};
+
+function applyTheme(theme, iconClass) {
+    const themeVars = theme === 'light' ? lightTheme : darkTheme;
+    for (const key in themeVars) {
+        root.style.setProperty(key, themeVars[key]);
+    }
+    icon.className = iconClass;
+    localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+    const current = localStorage.getItem('theme') || 'dark';
+    if (current === 'light') {
+        applyTheme('dark', 'bx bx-moon');
+    } else {
+        applyTheme('light', 'bx bx-sun');
+    }
+}
+
+toggleBtn.addEventListener('click', toggleTheme);
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme') || 'dark';
+    const iconClass = saved === 'light' ? 'bx bx-sun' : 'bx bx-moon';
+    applyTheme(saved, iconClass);
+});
