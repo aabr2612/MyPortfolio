@@ -451,164 +451,113 @@ span {
 .skills-column .title {
     position: relative;
     display: inline-block;
-    font-size: 2.5rem;
+    color: var(--main-color);
+    font-size: 3rem;
     margin: 0 0 1.5rem;
 }
 
-.skills-box .skills-content {
+.skills-column p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
     position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    padding: .5rem 1.5rem;
-    z-index: 1;
-    overflow: hidden;
 }
 
-.skills-box .skills-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.skills-box .skills-content:hover::before {
-    width: 100%;
-}
-
-.skills-content .progress {
-    padding: 1rem 0;
-}
-
-.skills-content .progress h3 {
-    font-size: 1.7rem;
+.skills-toggle-switch {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    width: max-content;
+    margin: 0 auto 3rem;
+    padding: 0.3rem;
 }
 
-.skills-content .progress h3 span {
+.skills-toggle-switch button {
+    padding: 1rem 3rem;
+    border: none;
+    background: none;
     color: var(--text-color);
+    font-size: 1.6rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.skills-content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-    padding: 0.5rem;
-    margin: 1rem 0;
+.skills-toggle-switch .toggle-option.active {
+    color: #fff;
 }
 
-.skills-content .progress .bar span {
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: var(--main-color);
+.switch-slider {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    width: 50%;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    z-index: 0;
+    transition: left 0.3s ease;
 }
 
-/* Coding Skills Widths */
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 80%;
-    /* C */
+.skills-switch-content {
+    width: 100%;
+    position: relative;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 90%;
-    /* C++ */
+.skills-content {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 85%;
-    /* C# */
+.skills-content.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+    padding: 2rem 1rem;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 85%;
-    /* Python */
+.skill-icon {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: var(--bg-color);
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-    width: 70%;
-    /* Java */
+.skill-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
-    width: 80%;
-    /* SQL */
+.skill-icon i {
+    font-size: 6.2rem;
+    color: var(--main-color);
+    pointer-events: none;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
-    width: 95%;
-    /* HTML */
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(8) .bar span {
-    width: 90%;
-    /* CSS (Tailwind, Bootstrap) */
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(9) .bar span {
-    width: 85%;
-    /* JavaScript / TypeScript */
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(10) .bar span {
-    width: 85%;
-    /* React.js */
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(11) .bar span {
-    width: 80%;
-    /* Node.js & Express.js */
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(12) .bar span {
-    width: 80%;
-    /* MongoDB (Mongoose) */
-}
-
-/* Professional Skills Widths */
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 95%;
-    /* Full Stack Web Development */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 90%;
-    /* Frontend Architecture & UI Design */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 85%;
-    /* Backend API Development */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 85%;
-    /* Database Design & Management */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-    width: 85%;
-    /* Desktop App Development */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
-    width: 80%;
-    /* Deployment & Hosting */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
-    width: 80%;
-    /* API Integration & 3rd Party Services */
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(8) .bar span {
-    width: 85%;
-    /* Version Control & Collaboration */
+.skill-icon span {
+    margin-top: 0.6rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
 }
 
 /* Contact Section */

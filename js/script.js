@@ -84,3 +84,26 @@ window.addEventListener('DOMContentLoaded', () => {
     const iconClass = saved === 'light' ? 'bx bx-sun' : 'bx bx-moon';
     applyTheme(saved, iconClass);
 });
+
+// skill tab toggle
+const toggleButtons = document.querySelectorAll('.toggle-option');
+const switchSlider = document.getElementById('switch-slider');
+const contentPanels = document.querySelectorAll('.skills-content');
+
+// tab click handling
+toggleButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // remove active from all
+        toggleButtons.forEach(btn => btn.classList.remove('active'));
+        // add active to clicked
+        button.classList.add('active');
+
+        // move slider
+        switchSlider.style.left = index === 0 ? '3px' : '48.5%';
+
+        // show selected content
+        contentPanels.forEach(panel => panel.classList.remove('active'));
+        const target = button.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+    });
+});
