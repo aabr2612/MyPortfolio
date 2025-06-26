@@ -922,6 +922,11 @@ section:nth-child(odd) .animate.scroll {
         font-size: 50%;
     }
 
+    .home-imgHover {
+        visibility: hidden;
+        overflow: hidden;
+    }
+
     .home-content .about-img {
         display: flex;
     }
