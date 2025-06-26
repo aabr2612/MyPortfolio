@@ -643,6 +643,21 @@ span {
     cursor: pointer;
 }
 
+.notification {
+    position: fixed;
+    top: 7rem;
+    right: 1rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 171, 240, 0.4);
+    z-index: 9999;
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -950,6 +965,27 @@ section:nth-child(odd) .animate.scroll {
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 }
 

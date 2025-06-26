@@ -258,7 +258,7 @@
             <div class="skill-icon" title="React"><i class="devicon-react-original colored"></i><span>React</span></div>
             <div class="skill-icon" title="Express.js"><i
                 class="devicon-express-original colored"></i><span>Express</span></div>
-                <div class="skill-icon" title="Node.js"><i class="devicon-nodejs-plain colored"></i><span>Node</span>
+            <div class="skill-icon" title="Node.js"><i class="devicon-nodejs-plain colored"></i><span>Node</span>
             </div>
             <div class="skill-icon" title="MongoDB"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
             </div>
@@ -291,20 +291,19 @@
     <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
     <!-- Contact Form -->
-    <form action="#">
-
+    <form id="contact-form">
       <!-- Input Box -->
       <div class="input-box">
 
         <!-- Name Input -->
         <div class="input-field">
-          <input type="text" placeholder="Full Name" required />
+          <input type="text" name="name" placeholder="Full Name" required />
           <span class="focus"></span>
         </div>
 
         <!-- Email Input -->
         <div class="input-field">
-          <input type="email" placeholder="Email" required />
+          <input type="email" name="email" placeholder="Email" required />
           <span class="focus"></span>
         </div>
         <span class="animate scroll" style="--i:3;"></span>
@@ -314,13 +313,13 @@
 
         <!-- Contact Number Input -->
         <div class="input-field">
-          <input type="number" placeholder="Mobile Number" required />
+          <input type="number" name="phone" placeholder="Mobile Number" required />
           <span class="focus"></span>
         </div>
 
         <!-- Email Subject -->
         <div class="input-field">
-          <input type="text" placeholder="Email Subject" required />
+          <input type="text" name="subject" placeholder="Email Subject" required />
           <span class="focus"></span>
         </div>
 
@@ -329,7 +328,7 @@
 
       <!-- Message Textarea -->
       <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
         <span class="focus"></span>
         <span class="animate scroll" style="--i:7;"></span>
       </div>
@@ -341,6 +340,10 @@
       </div>
 
     </form>
+    <div id="notification" class="notification">
+      Message sent successfully!
+    </div>
+
   </section>
   <!-- Contact Section End -->
 
@@ -364,6 +367,8 @@
   </div>
 
   <script src='js/script.js'></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/email.js"></script>
 </body>
 
 </html>
