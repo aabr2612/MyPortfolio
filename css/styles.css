@@ -1000,10 +1000,12 @@ section:nth-child(odd) .animate.scroll {
 
     .home-content p {
         text-align: center;
+        margin-bottom: 2rem;
     }
 
     .home-sci {
         width: 240px;
+        bottom: 3rem;
     }
 
     .home-sci a {
@@ -1032,14 +1034,6 @@ section:nth-child(odd) .animate.scroll {
 }
 
 @media (max-width: 381px) {
-    .home-content p {
-        margin-bottom: 2rem;
-    }
-
-    .home-sci {
-        bottom: 2rem;
-    }
-
     .about-img {
         width: 20rem;
         height: 20rem;
