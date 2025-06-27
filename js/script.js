@@ -27,7 +27,7 @@ window.onscroll = () => {
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
             // active sections for animation on scroll
-            sec.classList.add('show-animate')
+            sec.classList.add('show-animate');
         }
     });
 
@@ -59,18 +59,23 @@ const darkTheme = {
     '--main-color': '#00abf0',
 };
 
+// theme variable
+let currentTheme = 'dark';
+
 function applyTheme(theme, iconClass) {
     const themeVars = theme === 'light' ? lightTheme : darkTheme;
     for (const key in themeVars) {
         root.style.setProperty(key, themeVars[key]);
     }
     icon.className = iconClass;
-    localStorage.setItem('theme', theme);
+    currentTheme = theme;
 }
 
+// set initial theme
+applyTheme(currentTheme, 'bx bx-moon');
+
 function toggleTheme() {
-    const current = localStorage.getItem('theme') || 'dark';
-    if (current === 'light') {
+    if (currentTheme === 'light') {
         applyTheme('dark', 'bx bx-moon');
     } else {
         applyTheme('light', 'bx bx-sun');
@@ -78,12 +83,6 @@ function toggleTheme() {
 }
 
 toggleBtn.addEventListener('click', toggleTheme);
-
-window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('theme') || 'dark';
-    const iconClass = saved === 'light' ? 'bx bx-sun' : 'bx bx-moon';
-    applyTheme(saved, iconClass);
-});
 
 // skill tab toggle
 const toggleButtons = document.querySelectorAll('.toggle-option');
