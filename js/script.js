@@ -47,7 +47,7 @@ const root = document.documentElement;
 
 const lightTheme = {
     '--bg-color': '#ffffff',
-    '--second-bg-color': '#f5f5f5',
+    '--second-bg-color': '#f3f3f3',
     '--text-color': '#1a1a1a',
     '--main-color': '#00abf0',
 };

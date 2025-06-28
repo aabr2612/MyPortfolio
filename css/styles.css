@@ -871,6 +871,25 @@ section:nth-child(odd) .animate.scroll {
     .footer {
         padding: 2rem 4%;
     }
+
+    .skills-content.active {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+        gap: 1.3rem;
+    }
+
+    .skill-icon {
+        width: 94px;
+        height: 94px;
+    }
+
+    .skill-icon i,
+    .skill-icon .iconify {
+        font-size: 5.8rem !important;
+    }
+
+    .skill-icon span {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width:830px) {
@@ -891,6 +910,29 @@ section:nth-child(odd) .animate.scroll {
     .about-img {
         width: 35rem;
         height: 35rem;
+    }
+
+    .skills-column p{
+        font-size: 1.8rem;
+        margin-bottom: -1.5rem;
+    }
+    .skills-content.active {
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .skill-icon {
+        width: 84px;
+        height: 84px;
+    }
+
+    .skill-icon i,
+    .skill-icon .iconify {
+        font-size: 5rem !important;
+    }
+
+    .skill-icon span {
+        font-size: 1.2rem;
     }
 }
 
@@ -1011,6 +1053,25 @@ section:nth-child(odd) .animate.scroll {
     .home-sci a {
         width: 35px;
         height: 35px;
+    }
+
+    .skills-content.active {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .skill-icon i,
+    .skill-icon .iconify {
+        font-size: 4.2rem !important;
+    }
+
+    .skill-icon span {
+        font-size: 1.1rem;
     }
 }
 
