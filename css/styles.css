@@ -379,7 +379,11 @@ span {
 .about-content p {
     position: relative;
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 0 0;
+}
+
+.about-content p:first-of-type {
+    text-indent: 2rem;
 }
 
 .btn-box.btns {
