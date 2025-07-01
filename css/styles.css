@@ -476,7 +476,8 @@ span {
     font-size: 2rem;
 }
 
-.education-content .content p {
+.education-content .content p,
+.education-content .content span {
     font-size: 1.6rem;
     padding-top: .5rem;
 }
@@ -912,10 +913,11 @@ section:nth-child(odd) .animate.scroll {
         height: 35rem;
     }
 
-    .skills-column p{
+    .skills-column p {
         font-size: 1.8rem;
         margin-bottom: -1.5rem;
     }
+
     .skills-content.active {
         grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
         gap: 1.2rem;
