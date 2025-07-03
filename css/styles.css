@@ -382,7 +382,8 @@ span {
     margin: 1rem 0 0 0;
 }
 
-.about-content p:first-of-type {
+.about-content p:first-of-type,
+.skills-column p {
     text-indent: 2rem;
 }
 
