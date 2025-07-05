@@ -387,6 +387,7 @@ span {
 
 /* Projects Section */
 .projects {
+    min-height: auto;
     gap: 2rem;
     background: var(--second-bg-color);
     padding-bottom: 6rem;
@@ -734,6 +735,11 @@ span {
 
 .contact form .textarea-field textarea {
     resize: none;
+}
+
+.contact form .btn-box.btns {
+    display: inline-block;
+    width: 25rem;
 }
 
 .contact form .btn-box.btns .btn {
