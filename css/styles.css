@@ -404,17 +404,52 @@ span {
 }
 
 .project-content {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
+    gap: 1rem;
     padding: 2rem;
     flex: 1 1 40rem;
+    transition: .3s ease-in-out;
 }
 
-.project-content .title {
+.project-content:hover {
+    transform: scale(1.025);
+    transition: .3s;
+}
+
+.project-content h3 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
+    font-weight: 700;
+}
+
+.project-content img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: .5rem;
+    background: var(--second-bg-color);
+}
+
+.project-content p {
+    text-align: justify;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content ul {
+    margin-left: 2rem;
+}
+
+.project-content span {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: -1.5rem;
 }
 
 .project-content .btn-box {
@@ -1106,6 +1141,10 @@ section:nth-child(odd) .animate.scroll {
         height: 35px;
     }
 
+    .about-box {
+        flex-direction: column;
+    }
+
     .skills-content.active {
         grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
         gap: 1rem;
@@ -1146,6 +1185,10 @@ section:nth-child(odd) .animate.scroll {
 }
 
 @media (max-width: 381px) {
+    html {
+        font-size: 40%;
+    }
+
     .about-img {
         width: 20rem;
         height: 20rem;
