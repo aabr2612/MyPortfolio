@@ -387,6 +387,68 @@ span {
     text-indent: 2rem;
 }
 
+/* Services Section */
+.services {
+    min-height: auto;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+
+.services-container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: .6rem;
+    gap: 1rem;
+    padding: 2rem;
+    flex: 1 1 40rem;
+    transition: .3s ease-in-out;
+    background: linear-gradient(-45deg,var(--second-bg-color),var(--main-color),var(--second-bg-color));
+}
+
+.service-content:hover {
+    transform: rotate(1deg) scale(1.025);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.service-icon {
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.service-content h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.service-content p {
+    font-size: 1.8rem;
+    text-align: justify;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
 /* Projects Section */
 .projects {
     min-height: auto;
@@ -439,10 +501,6 @@ span {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
-
-.project-content ul {
-    margin-left: 2rem;
 }
 
 .project-content span {
