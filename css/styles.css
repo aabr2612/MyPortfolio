@@ -403,6 +403,7 @@ span {
 }
 
 .service-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -466,6 +467,7 @@ span {
 }
 
 .project-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
