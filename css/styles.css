@@ -1244,7 +1244,7 @@ section:nth-child(odd) .animate.scroll {
     }
 }
 
-@media (max-width: 381px) {
+@media (max-width: 395px) {
     html {
         font-size: 40%;
     }
