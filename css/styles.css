@@ -285,21 +285,6 @@ section {
     color: var(--bg-color);
 }
 
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-}
-
-.home-imgHover:hover {
-    background-color: var(--bg-color);
-    opacity: .8;
-}
-
 /* About Section */
 .about {
     min-height: auto;
@@ -743,7 +728,8 @@ span {
     box-shadow: 0 .8rem 2.4rem rgba(0, 0, 0, 0.15);
 }
 
-.skill-icon i {
+.skill-icon i,
+.skill-icon .iconify {
     font-size: 6.2rem;
     color: var(--main-color);
     pointer-events: none;

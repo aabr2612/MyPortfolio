@@ -59,8 +59,8 @@ const darkTheme = {
     '--main-color': '#00abf0',
 };
 
-// theme variable
-let currentTheme = 'dark';
+// theme variable based on browser theme
+let currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 function applyTheme(theme, iconClass) {
     const themeVars = theme === 'light' ? lightTheme : darkTheme;
@@ -72,7 +72,7 @@ function applyTheme(theme, iconClass) {
 }
 
 // set initial theme
-applyTheme(currentTheme, 'bx bx-moon');
+applyTheme(currentTheme, currentTheme === 'dark' ? 'bx bx-moon' : 'bx bx-sun');
 
 function toggleTheme() {
     if (currentTheme === 'light') {
