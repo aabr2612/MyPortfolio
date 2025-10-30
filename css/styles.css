@@ -397,11 +397,11 @@ span {
     padding: 2rem;
     flex: 1 1 40rem;
     transition: .3s ease-in-out;
-    background: linear-gradient(-45deg,var(--second-bg-color),var(--main-color),var(--second-bg-color));
+    background: var(--second-bg-color);
 }
 
 .service-content:hover {
-    transform: rotate(1deg) scale(1.025);
+    transform: scale(1.025);
     transition: transform 0.3s ease-in-out;
 }
 
