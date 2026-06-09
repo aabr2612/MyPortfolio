@@ -13,6 +13,10 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 
+// social sidebar logic
+let socialSidebar = document.querySelector('.social-sidebar');
+let isSidebarManuallyOpened = false;
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -31,6 +35,20 @@ window.onscroll = () => {
         }
     });
 
+    if (window.innerWidth > 1080) {
+        socialSidebar.classList.remove('collapsed');
+        isSidebarManuallyOpened = false;
+    } else if (window.scrollY > 300) {
+        if (!isSidebarManuallyOpened) {
+            socialSidebar.classList.add('collapsed');
+        }
+    } else {
+        socialSidebar.classList.remove('collapsed');
+        isSidebarManuallyOpened = false;
+        let toggleIcon = sidebarToggle.querySelector('i');
+        toggleIcon.className = 'bx bx-chevron-right';
+    }
+
     // sticky header
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
@@ -38,6 +56,21 @@ window.onscroll = () => {
     // remove toggle icon and navbar when click navbar link (scroll)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
+}
+
+// social sidebar toggle
+let sidebarToggle = document.querySelector('#sidebar-toggle');
+
+sidebarToggle.onclick = () => {
+    socialSidebar.classList.toggle('collapsed');
+    isSidebarManuallyOpened = !socialSidebar.classList.contains('collapsed');
+    
+    let toggleIcon = sidebarToggle.querySelector('i');
+    if (socialSidebar.classList.contains('collapsed')) {
+        toggleIcon.className = 'bx bx-chevron-right';
+    } else {
+        toggleIcon.className = 'bx bx-chevron-left';
+    }
 }
 
 // theme toggle
