@@ -225,7 +225,7 @@ section {
     .social-sidebar {
         left: 4rem !important;
     }
-    
+
     .sidebar-toggle {
         display: none !important;
     }
@@ -569,11 +569,13 @@ span {
     justify-content: center;
     gap: 2rem;
 }
+
 .projects-btn {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
 }
+
 /* journey Section */
 .journey {
     min-height: auto;
@@ -1312,19 +1314,27 @@ section:nth-child(odd) .animate.scroll {
 
 /* Animations */
 @keyframes display-text {
-    0%, 50% {
+
+    0%,
+    50% {
         display: inline-block;
     }
-    50.01%, 100% {
+
+    50.01%,
+    100% {
         display: none;
     }
 }
 
 @keyframes fill-text {
-    10%, 90% {
+
+    10%,
+    90% {
         width: 100%;
     }
-    0%, 100% {
+
+    0%,
+    100% {
         width: 0;
     }
 }
@@ -1372,4 +1382,72 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     appearance: textfield;
     -moz-appearance: textfield;
+}
+
+/* --- Added Polish --- */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #008cc0;
+}
+
+/* Neon Glow on Hover */
+.project-content:hover,
+.service-content:hover,
+.journey-content .content:hover {
+    box-shadow: 0 0 2.5rem rgba(0, 171, 240, 0.15);
+    border-color: var(--main-color);
+}
+
+/* Typing Animation */
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .3rem solid var(--main-color);
+    width: 0;
+    max-width: max-content;
+    animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+    animation-delay: 1s;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--main-color)
+    }
+}
+
+/* Light Theme Variables */
+body.light-theme {
+    --bg-color: #ffffff;
+    --second-bg-color: #f3f3f3;
+    --text-color: #1a1a1a;
+    --main-color: #00abf0;
 }

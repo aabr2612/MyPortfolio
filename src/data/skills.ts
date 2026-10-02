@@ -1,0 +1,40 @@
+export const skills = {
+  coding: [
+    { name: "C++ / C", iconClass: "devicon-cplusplus-plain colored" },
+    { name: "C# / .NET", iconClass: "devicon-csharp-plain colored" },
+    { name: "Python", iconClass: "devicon-python-plain colored" },
+    { name: "ASP.NET", iconClass: "devicon-dot-net-plain colored" },
+    { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
+    { name: "React", iconClass: "devicon-react-original colored" },
+    {
+      name: "SQL Server",
+      iconClass: "devicon-microsoftsqlserver-plain colored",
+    },
+    { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
+    { name: "MySQL", iconClass: "devicon-mysql-plain colored" },
+    { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
+    { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
+    { name: "Flask", iconClass: "devicon-flask-original" },
+    { name: "Express", iconClass: "devicon-express-original colored" },
+    { name: "HTML/CSS", iconClass: "devicon-html5-plain colored" },
+    { name: "Bootstrap", iconClass: "devicon-bootstrap-plain colored" },
+  ],
+  tools: [
+    { name: "DB Arch", iconClass: "bx bx-data" },
+    { name: "Stored Procs", iconClass: "bx bx-code-alt" },
+    { name: "Migration", iconClass: "bx bx-transfer" },
+    { name: "AI Integration", iconClass: "bx bx-bot" },
+    { name: "REST APIs", iconClass: "bx bx-cloud-upload" },
+    { name: "GitHub", iconClass: "devicon-github-original colored" },
+    {
+      name: "Postman",
+      iconClass: "iconify",
+      customAttr: {
+        "data-icon": "simple-icons:postman",
+        style: { color: "#FF6C37" },
+      },
+    },
+    { name: "Visual Studio", iconClass: "devicon-visualstudio-plain colored" },
+    { name: "Code Review", iconClass: "bx bx-check-shield" },
+  ],
+};
