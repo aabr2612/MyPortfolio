@@ -16,6 +16,7 @@ const Header: React.FC = () => {
         "projects",
         "journey",
         "skills",
+        "testimonials",
         "contact",
       ];
       for (const section of sections) {

@@ -16,11 +16,8 @@ const Skills: React.FC = () => {
         <div className="skills-main-content">
           <div className="skills-description">
             <p>
-              Architecting end-to-end systems across{" "}
-              <b>Backend Engineering</b>, <b>Database Architecture</b>,{" "}
-              <b>Enterprise ERP Workflows</b>, and{" "}
-              <b>Full-Stack Applications</b>—built for scale, data integrity,
-              and clean maintainability.
+              Core technical stack focused on backend services, database design,
+              enterprise workflows, and scalable web applications.
             </p>
           </div>
 

@@ -33,25 +33,30 @@ const Home: React.FC = () => {
         <div className="home-content">
           <div className="hero-badge">
             <span className="status-dot"></span>
-            <span className="badge-text">Available for Full-Stack &amp; Backend Roles</span>
+            <span className="badge-text">
+              Available for Full-Stack &amp; Backend Roles
+            </span>
           </div>
 
           <h1>
             Hi, I'm <span className="nowrap-name">{personalInfo.name}</span>
           </h1>
 
-          <h2>{personalInfo.title}</h2>
+          <h2>{personalInfo.headline}</h2>
 
           {/* Introduction */}
           <p>{personalInfo.introduction}</p>
 
           {/* Buttons */}
           <div className="btn-box">
-            <a href="AbdulRehman.pdf" download className="btn">
-              <i className="bx bx-download"></i> Download CV
+            <a href="#journey" className="btn">
+              <i className="bx bx-briefcase-alt-2"></i> View My Work
             </a>
             <a href="#contact" className="btn">
-              <i className="bx bx-send"></i> Let's Talk
+              <i className="bx bx-send"></i> Contact Me
+            </a>
+            <a href="AbdulRehman.pdf" download className="btn btn-secondary">
+              <i className="bx bx-download"></i> Download CV
             </a>
           </div>
 
