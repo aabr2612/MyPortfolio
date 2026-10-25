@@ -12,10 +12,9 @@ const Header: React.FC = () => {
       const sections = [
         "home",
         "about",
-        "services",
-        "projects",
         "journey",
         "skills",
+        "projects",
         "testimonials",
         "contact",
       ];
@@ -36,13 +35,13 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Journey", href: "#journey" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#home", section: "home" },
+    { name: "About", href: "#about", section: "about" },
+    { name: "Experience", href: "#journey", section: "journey" },
+    { name: "Skills", href: "#skills", section: "skills" },
+    { name: "Projects", href: "#projects", section: "projects" },
+    { name: "Reviews", href: "#testimonials", section: "testimonials" },
+    { name: "Contact", href: "#contact", section: "contact" },
   ];
 
   return (
@@ -62,9 +61,7 @@ const Header: React.FC = () => {
           <a
             key={link.name}
             href={link.href}
-            className={
-              activeSection === link.name.toLowerCase() ? "active" : ""
-            }
+            className={activeSection === link.section ? "active" : ""}
             onClick={() => setIsMenuOpen(false)}
           >
             {link.name}

@@ -7,7 +7,6 @@ const About: React.FC = () => {
       {/* About Section Start */}
       <section className="about" id="about">
         <div className="section-header">
-          <span className="section-tag">Introduction</span>
           <h2 className="heading">
             About <span>Me</span>
           </h2>

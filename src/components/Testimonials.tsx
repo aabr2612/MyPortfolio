@@ -10,13 +10,9 @@ const Testimonials: React.FC = () => {
       {/* Testimonials Section Start */}
       <section className="testimonials" id="testimonials">
         <div className="section-header">
-          <span className="section-tag">Client Endorsements</span>
           <h2 className="heading">
-            Client <span>Feedback</span>
+            Client <span>Reviews</span>
           </h2>
-          <p className="testimonials-subtitle">
-            Verified feedback from international clients
-          </p>
         </div>
 
         {/* Floating Moving Marquee Stream */}
@@ -37,12 +33,7 @@ const Testimonials: React.FC = () => {
                     {item.client.charAt(0)}
                   </div>
                   <div className="client-info">
-                    <div className="client-title-row">
-                      <h4>{item.client}</h4>
-                      <span className="client-country">
-                        <i className="bx bx-globe"></i> {item.country}
-                      </span>
-                    </div>
+                    <h4>{item.client}</h4>
                     <span className="client-role">{item.role}</span>
                   </div>
                 </div>
@@ -61,6 +52,9 @@ const Testimonials: React.FC = () => {
                 </blockquote>
 
                 <div className="testimonial-footer">
+                  <span className="client-country">
+                    <i className="bx bx-globe"></i> {item.country}
+                  </span>
                   <span className="verified-badge">
                     <i className="bx bxs-badge-check"></i> Verified Delivery
                   </span>

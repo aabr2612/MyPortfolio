@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Top Icon */}
         <div className="footer-iconTop">
-          <a href="#home">
+          <a href="#home" title="Back to Top">
             <i className="bx bx-up-arrow-alt"></i>
           </a>
         </div>

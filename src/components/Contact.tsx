@@ -14,10 +14,12 @@ const Contact: React.FC = () => {
       {/* Contact Section Start */}
       <section className="contact" id="contact">
         <div className="section-header">
-          <span className="section-tag">Get In Touch</span>
           <h2 className="heading">
             Contact <span>Me</span>
           </h2>
+          <p className="contact-intro">
+            Have a project in mind, an idea to discuss, or looking to hire? Feel free to reach out directly or send a message below.
+          </p>
         </div>
 
         <div className="contact-email">

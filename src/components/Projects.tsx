@@ -13,9 +13,8 @@ const Projects: React.FC = () => {
       {/* Projects Section Start */}
       <section className="projects" id="projects">
         <div className="section-header">
-          <span className="section-tag">Selected Builds</span>
           <h2 className="heading">
-            Featured <span>Work</span>
+            Featured <span>Projects</span>
           </h2>
         </div>
 

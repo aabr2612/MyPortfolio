@@ -1,51 +1,46 @@
 import React from "react";
-import { skills } from "../data/skills";
+import { capabilities } from "../data/capabilities";
 
 const Skills: React.FC = () => {
   return (
-    <>
-      {/* Skills Section Start */}
-      <section className="skills" id="skills">
-        <div className="section-header">
-          <span className="section-tag">Technical Arsenal</span>
-          <h2 className="heading">
-            Core <span>Skills</span>
-          </h2>
-        </div>
+    <section className="skills" id="skills">
+      <div className="section-header">
+        <h2 className="heading">
+          Technical <span>Skills</span>
+        </h2>
+        <p className="contact-intro">
+          Full-stack engineering focused on production-ready web applications, performant backends, clean databases, and scalable enterprise workflows.
+        </p>
+      </div>
 
-        <div className="skills-main-content">
-          <div className="skills-description">
-            <p>
-              Core technical stack focused on backend services, database design,
-              enterprise workflows, and scalable web applications.
-            </p>
-          </div>
-
-          <div className="skills-bento">
-            {/* Group 1: Languages & Frameworks */}
-            <div className="skills-group-card">
-              <div className="skills-group-header">
-                <i className="bx bx-code-block"></i>
-                <h3>Languages, Frameworks &amp; Databases</h3>
+      <div className="capabilities-grid">
+        {capabilities.map((cap) => (
+          <div className="capability-card" key={cap.id}>
+            <div className="capability-card-body">
+              <div className="capability-card-top">
+                <div className="capability-icon">
+                  <i className={cap.icon}></i>
+                </div>
+                <h3>{cap.title}</h3>
               </div>
-              <div className="skills-chip-grid">
-                {skills.coding.map((skill, i) => (
-                  <div className="skill-chip" key={i}>
-                    <i className={skill.iconClass}></i>
-                    <span>{skill.name}</span>
-                  </div>
-                ))}
+
+              <p className="capability-desc">{cap.description}</p>
+
+              <div className="capability-deliverables">
+                <ul>
+                  {cap.deliverables.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
 
-            {/* Group 2: Architecture & Engineering */}
-            <div className="skills-group-card">
-              <div className="skills-group-header">
-                <i className="bx bx-layer"></i>
-                <h3>Architecture, Tools &amp; Practices</h3>
-              </div>
+            <div className="capability-skills-side">
+              <h5>
+                <i className="bx bx-code-alt"></i> Tech Stack
+              </h5>
               <div className="skills-chip-grid">
-                {skills.tools.map((skill, i) => (
+                {cap.skills.map((skill, i) => (
                   <div className="skill-chip" key={i}>
                     {skill.iconClass === "iconify" ? (
                       <span
@@ -62,10 +57,9 @@ const Skills: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Skills Section End */}
-    </>
+        ))}
+      </div>
+    </section>
   );
 };
 

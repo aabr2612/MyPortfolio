@@ -8,9 +8,8 @@ const Journey: React.FC = () => {
       {/* Journey Section Start */}
       <section className="journey" id="journey">
         <div className="section-header">
-          <span className="section-tag">Career Progression</span>
           <h2 className="heading">
-            Professional <span>Experience</span>
+            Career &amp; <span>Education</span>
           </h2>
         </div>
 
