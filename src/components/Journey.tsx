@@ -67,7 +67,11 @@ const Journey: React.FC = () => {
                     </div>
                     <h3>{exp.role}</h3>
                     <span>{exp.company}</span>
-                    <p>{exp.description}</p>
+                    <ul className="journey-points">
+                      {exp.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}

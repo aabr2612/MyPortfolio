@@ -1451,3 +1451,16 @@ body.light-theme {
     --text-color: #1a1a1a;
     --main-color: #00abf0;
 }
+
+/* Journey bullet points */
+.journey-content .content .journey-points {
+    list-style: disc;
+    padding-left: 2rem;
+    padding-top: .5rem;
+}
+
+.journey-content .content .journey-points li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding-top: .3rem;
+}
