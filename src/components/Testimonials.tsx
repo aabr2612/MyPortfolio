@@ -15,7 +15,7 @@ const Testimonials: React.FC = () => {
             Client <span>Feedback</span>
           </h2>
           <p className="testimonials-subtitle">
-            Hover over any review to pause the stream
+            Verified feedback from international clients
           </p>
         </div>
 
@@ -37,12 +37,14 @@ const Testimonials: React.FC = () => {
                     {item.client.charAt(0)}
                   </div>
                   <div className="client-info">
-                    <h4>{item.client}</h4>
+                    <div className="client-title-row">
+                      <h4>{item.client}</h4>
+                      <span className="client-country">
+                        <i className="bx bx-globe"></i> {item.country}
+                      </span>
+                    </div>
                     <span className="client-role">{item.role}</span>
                   </div>
-                  <span className="client-country">
-                    <i className="bx bx-globe"></i> {item.country}
-                  </span>
                 </div>
 
                 <div className="testimonial-meta">
