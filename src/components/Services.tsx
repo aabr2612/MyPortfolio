@@ -6,15 +6,14 @@ const Services: React.FC = () => {
     <>
       {/* Services Section Start */}
       <section className="services" id="services">
-        <h2 className="heading">
-          My <span>Services</span>
-          <span
-            className="animate scroll"
-            style={{ "--i": 0.5 } as React.CSSProperties}
-          ></span>
-        </h2>
+        <div className="section-header">
+          <span className="section-tag">What I Do</span>
+          <h2 className="heading">
+            My <span>Services</span>
+          </h2>
+        </div>
         <div className="services-container">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div className="service-content" key={service.id}>
               <div className="service-header">
                 <div className="service-icon" title={service.title}>
@@ -23,10 +22,6 @@ const Services: React.FC = () => {
                 <h3>{service.title}</h3>
               </div>
               <p>{service.description}</p>
-              <span
-                className="animate scroll"
-                style={{ "--i": 1 + index * 0.5 } as React.CSSProperties}
-              ></span>
             </div>
           ))}
         </div>

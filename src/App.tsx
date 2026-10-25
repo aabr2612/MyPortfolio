@@ -12,28 +12,24 @@ import ThemeToggle from "./components/ThemeToggle";
 import "./index.css";
 
 const App: React.FC = () => {
-  // Porting the scroll reveal animation logic
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      sections.forEach((sec) => {
-        const top = window.scrollY;
-        const offset = (sec as HTMLElement).offsetTop - 100;
-        const height = sec.offsetHeight;
+    const sections = document.querySelectorAll("section");
 
-        if (top >= offset && top < offset + height) {
-          sec.classList.add("show-animate");
-        } else {
-          sec.classList.remove("show-animate");
-        }
-      });
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
 
-    // Run once on load to show initial animations
-    handleScroll();
+    sections.forEach((sec) => observer.observe(sec));
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   return (

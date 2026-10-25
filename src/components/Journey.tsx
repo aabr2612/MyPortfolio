@@ -7,66 +7,33 @@ const Journey: React.FC = () => {
     <>
       {/* Journey Section Start */}
       <section className="journey" id="journey">
-        <h2 className="heading">
-          My <span>Journey</span>
-          <span
-            className="animate scroll"
-            style={{ "--i": 0.5 } as React.CSSProperties}
-          ></span>
-        </h2>
-
-        {/* Education Row */}
-        <div className="journey-row" style={{ marginBottom: "5rem" }}>
-          <div className="journey-column" style={{ flex: "1 1 100%" }}>
-            <h3 className="title">
-              Education
-              <span
-                className="animate scroll"
-                style={{ "--i": 1 } as React.CSSProperties}
-              ></span>
-            </h3>
-            <div className="journey-box">
-              {education.map((edu) => (
-                <div className="journey-content" key={edu.id}>
-                  <div className="content">
-                    <div className="year">
-                      <i className="bx bxs-calendar"></i>
-                      {edu.duration}
-                    </div>
-                    <h3>{edu.institution}</h3>
-                    <span>{edu.degree}</span>
-                    <p>{edu.description}</p>
-                  </div>
-                </div>
-              ))}
-              <span
-                className="animate scroll"
-                style={{ "--i": 1.5 } as React.CSSProperties}
-              ></span>
-            </div>
-          </div>
+        <div className="section-header">
+          <span className="section-tag">Career &amp; Academics</span>
+          <h2 className="heading">
+            My <span>Journey</span>
+          </h2>
         </div>
 
-        {/* Experience Row */}
-        <div className="journey-row">
-          <div className="journey-column" style={{ flex: "1 1 100%" }}>
+        <div className="journey-grid">
+          {/* Professional Experience Column */}
+          <div className="journey-column experience-col">
             <h3 className="title">
-              Professional Experience
-              <span
-                className="animate scroll"
-                style={{ "--i": 2 } as React.CSSProperties}
-              ></span>
+              <i className="bx bx-briefcase-alt-2"></i> Professional Experience
             </h3>
             <div className="journey-box">
               {experience.map((exp) => (
                 <div className="journey-content" key={exp.id}>
                   <div className="content">
-                    <div className="year">
-                      <i className="bx bxs-calendar"></i>
-                      {exp.duration}
+                    <div className="card-top">
+                      <div>
+                        <h3>{exp.role}</h3>
+                        <span className="company-badge">{exp.company}</span>
+                      </div>
+                      <div className="year">
+                        <i className="bx bxs-calendar"></i>
+                        {exp.duration}
+                      </div>
                     </div>
-                    <h3>{exp.role}</h3>
-                    <span>{exp.company}</span>
                     <ul className="journey-points">
                       {exp.points.map((point, i) => (
                         <li key={i}>{point}</li>
@@ -75,10 +42,32 @@ const Journey: React.FC = () => {
                   </div>
                 </div>
               ))}
-              <span
-                className="animate scroll"
-                style={{ "--i": 2.5 } as React.CSSProperties}
-              ></span>
+            </div>
+          </div>
+
+          {/* Education Column */}
+          <div className="journey-column education-col">
+            <h3 className="title">
+              <i className="bx bxs-graduation"></i> Education
+            </h3>
+            <div className="journey-box">
+              {education.map((edu) => (
+                <div className="journey-content" key={edu.id}>
+                  <div className="content">
+                    <div className="card-top">
+                      <div>
+                        <h3>{edu.degree}</h3>
+                        <span className="company-badge">{edu.institution}</span>
+                      </div>
+                      <div className="year">
+                        <i className="bx bxs-calendar"></i>
+                        {edu.duration}
+                      </div>
+                    </div>
+                    <p>{edu.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

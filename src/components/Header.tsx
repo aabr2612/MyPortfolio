@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 100);
+      setIsSticky(window.scrollY > 50);
 
       const sections = [
         "home",
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
+          if (rect.top <= 180 && rect.bottom >= 180) {
             setActiveSection(section);
           }
         }
@@ -45,53 +45,33 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <>
-      {/* Header Start*/}
-      <header className={`header ${isSticky ? "sticky" : ""}`}>
-        {/* Logo */}
-        <a href="#home" className="logo">
-          AbdulRehman.
-          <span
-            className="animate"
-            style={{ "--i": 0.5 } as React.CSSProperties}
-          ></span>
-        </a>
+    <header className={`header ${isSticky ? "sticky" : ""}`}>
+      <a href="#home" className="logo">
+        Abdul<span>Rehman.</span>
+      </a>
 
-        {/* Mobile Navbar */}
-        <div
-          className={`bx bx-menu ${isMenuOpen ? "bx-x" : ""}`}
-          id="menu-icon"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span
-            className="animate"
-            style={{ "--i": 1 } as React.CSSProperties}
-          ></span>
-        </div>
+      <div
+        className={`bx bx-menu ${isMenuOpen ? "bx-x" : ""}`}
+        id="menu-icon"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      ></div>
 
-        {/* Navbar */}
-        <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={
-                activeSection === link.name.toLowerCase() ? "active" : ""
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          <span className="active-nav"></span>
-          <span
-            className="animate"
-            style={{ "--i": 1 } as React.CSSProperties}
-          ></span>
-        </nav>
-      </header>
-      {/* Header End */}
-    </>
+      <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className={
+              activeSection === link.name.toLowerCase() ? "active" : ""
+            }
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {link.name}
+          </a>
+        ))}
+        <span className="active-nav"></span>
+      </nav>
+    </header>
   );
 };
 

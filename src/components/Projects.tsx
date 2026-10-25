@@ -2,53 +2,67 @@ import React from "react";
 import { projects } from "../data/projects";
 
 const Projects: React.FC = () => {
+  const parseTechTags = (techStack: string) =>
+    techStack
+      .split(/\|\||,/)
+      .map((t) => t.trim())
+      .filter(Boolean);
+
   return (
     <>
       {/* Projects Section Start */}
       <section className="projects" id="projects">
-        <h2 className="heading">
-          My <span>Work</span>
-          <span
-            className="animate scroll"
-            style={{ "--i": 0.5 } as React.CSSProperties}
-          ></span>
-        </h2>
+        <div className="section-header">
+          <span className="section-tag">Selected Builds</span>
+          <h2 className="heading">
+            Featured <span>Work</span>
+          </h2>
+        </div>
+
         <div className="projects-container">
-          {projects.map((project, index) => (
-            <div className="project-content" key={project.id}>
-              {/* Project Details */}
-              <h3>{project.title}</h3>
-              <span>{project.techStack}</span>
-              <img src={project.image} alt={project.title} loading="lazy" />
-              <p>{project.description}</p>
-              {/* Buttons */}
-              <div className="btn-box">
-                <a
-                  href={project.links.code}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn"
-                >
-                  View Code
-                </a>
-                {project.links.live && (
+          {projects.map((project) => (
+            <article className="project-content" key={project.id}>
+              <div className="project-media">
+                <img src={project.image} alt={project.title} loading="lazy" />
+              </div>
+
+              <div className="project-body">
+                <div className="project-tags">
+                  {parseTechTags(project.techStack).map((tag) => (
+                    <span className="tech-pill" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+
+                <div className="project-links">
                   <a
-                    href={project.links.live}
+                    href={project.links.code}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn"
+                    className="project-link"
                   >
-                    Live Visit
+                    <i className="bx bxl-github"></i> Source Code
                   </a>
-                )}
+                  {project.links.live && (
+                    <a
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link primary"
+                    >
+                      <i className="bx bx-link-external"></i> Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
-              <span
-                className="animate scroll"
-                style={{ "--i": 1 + index * 0.5 } as React.CSSProperties}
-              ></span>
-            </div>
+            </article>
           ))}
         </div>
+
         {/* View More Projects */}
         <div className="btn-box projects-btn">
           <a
@@ -57,7 +71,7 @@ const Projects: React.FC = () => {
             rel="noreferrer"
             className="btn"
           >
-            View More Projects
+            <i className="bx bxl-github"></i> View More on GitHub
           </a>
         </div>
       </section>
