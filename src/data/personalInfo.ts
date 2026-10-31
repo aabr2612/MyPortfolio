@@ -33,4 +33,6 @@ export const personalInfo = {
     },
   ],
   email: "aabr2612@gmail.com",
+  cvUrl: `${import.meta.env.BASE_URL}AbdulRehman.pdf`,
+  cvFileName: "AbdulRehman.pdf",
 };

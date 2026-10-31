@@ -55,7 +55,11 @@ const Home: React.FC = () => {
             <a href="#contact" className="btn">
               <i className="bx bx-send"></i> Contact Me
             </a>
-            <a href="AbdulRehman.pdf" download className="btn btn-secondary">
+            <a
+              href={personalInfo.cvUrl}
+              download={personalInfo.cvFileName}
+              className="btn btn-secondary"
+            >
               <i className="bx bx-download"></i> Download CV
             </a>
           </div>
