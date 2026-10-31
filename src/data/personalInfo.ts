@@ -5,10 +5,9 @@ export const personalInfo = {
   introduction:
     "Full Stack Software Engineer focused on backend systems, enterprise applications, APIs, and database architecture. I turn business requirements into practical, reliable software that simplifies workflows and solves real problems.",
   aboutText: [
-    "I’m a Software Engineer focused on building reliable, scalable, and practical software systems. My work mainly revolves around backend development, database design, APIs, and full-stack applications, with a focus on turning real business requirements into maintainable solutions.",
-    "I’ve worked with technologies including C#, .NET, Node.js, React, Python, SQL, and MongoDB, and have delivered 40+ freelance projects for clients across different domains. I’ve also worked on enterprise HR, Payroll, and ERP systems, where I’ve handled database architecture, business workflows, reporting, data migration, and API development.",
-    "I enjoy working on systems where there’s more to solve than just writing code — understanding the requirements, designing the right approach, finding problems, and building something that actually works for the people using it.",
-    "I’m always learning, improving, and taking on projects that challenge me to become a better Software Engineer.",
+    "My journey in computer science began with a curiosity about what happens behind the screen. Rather than just using technology, I wanted to understand how it works, how software is built, and what makes everything work together. What started as an interest in programming gradually developed into a passion for creating applications and exploring how different parts of software fit together.",
+    "As I explored further, my focus grew beyond just writing code to understanding the bigger picture. I became interested in how user interfaces, backend logic, APIs, and databases connect to solve real problems. I find it rewarding to take an idea, understand what it needs, break it down, and turn it into something practical and usable.",
+    "I enjoy solving problems, whether it's debugging a difficult issue, improving performance, refining a workflow, or finding a better way to build a feature. I'm always looking to learn, experiment, and grow as a software engineer. For me, the real satisfaction comes from building solutions that work well, make things simpler, and are genuinely useful to the people who rely on them.",
   ],
   socialLinks: [
     {
