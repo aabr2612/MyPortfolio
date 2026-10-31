@@ -90,9 +90,17 @@ const Journey: React.FC = () => {
                       <h4>{edu.degree}</h4>
                       <span className="company-badge">{edu.institution}</span>
                     </div>
-                    <div className="year">
-                      <i className="bx bxs-calendar"></i>
-                      {edu.duration}
+                    <div className="edu-year-group">
+                      <div className="year">
+                        <i className="bx bxs-calendar"></i>
+                        {edu.duration}
+                      </div>
+                      {edu.score && (
+                        <div className="edu-marks">
+                          <i className="bx bx-award"></i>
+                          {edu.score}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <p>{edu.description}</p>
